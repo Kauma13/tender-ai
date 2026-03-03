@@ -1,0 +1,47 @@
+{
+  "request_id": "c82d2744-a6c0-4296-8675-0d6b9e42304c",
+  "timestamp_utc": "2026-03-03T04:26:12.800901Z",
+  "summary": {
+    "total": 1,
+    "errors": 0,
+    "routed_historical": 1,
+    "routed_template": 0,
+    "flagged_risk": 0,
+    "status": "COMPLETED",
+    "requires_sme_review": 0,
+    "unsupported": 0,
+    "inconsistent": 0,
+    "overclaim": 0,
+    "ready_to_submit": 1,
+    "needs_review": 0,
+    "confidence_min": 0.8,
+    "confidence_avg": 0.8,
+    "confidence_max": 0.8
+  },
+  "questions": [
+    {
+      "question_id": "Q001",
+      "question": "Describe your organisation’s information security management approach.",
+      "suggested_domain": null
+    }
+  ],
+  "enriched": [
+    {
+      "question_id": "Q001",
+      "question": "Describe your organisation’s information security management approach.",
+      "domain": "Security & Compliance",
+      "domain_confidence": 0.8,
+      "domain_used": "llm",
+      "risk_hints": [],
+      "route": "HISTORICAL_GUIDED",
+      "match_strength": "WEAK",
+      "top_similarity": 0.6411351792636864,
+      "flags": [],
+      "alignment": "MED",
+      "confidence": 0.8,
+      "answer": "Our organisation's information security management approach is built on a robust framework that includes security governance, defined policies, and oversight mechanisms. Security governance is led by senior leadership, ensuring accountability and alignment with organisational objectives. We maintain formal security policies and standards that are periodically reviewed to adapt to evolving risks.\n\nResponsibilities for information security are distributed across leadership and operational teams, fostering a culture of security awareness and compliance. Our approach includes regular risk assessments and internal reporting to monitor and manage security controls effectively. \n\nFor further details on our specific policies and practices, we are happy to provide additional information during due diligence or upon request.",
+      "error": null,
+      "evidence_pack": "[1] source=TENDER_2021_E domain=Security & Compliance sim=0.641\nQ: Describe your organisation’s information security management approach, including security governance, policies, and oversight.\nA: Security governance includes leadership accountability, policy management, risk assessment, and staff awareness practices. Controls are reviewed periodically, and exceptions are documented and managed.\n\n[2] source=TENDER_2024_A domain=Security & Compliance sim=0.627\nQ: Describe your organisation’s information security management approach, including security governance, policies, and oversight.\nA: We maintain an information security management framework with executive oversight, defined security policies and standards, and periodic review. Security responsibilities are assigned across leadership and delivery teams, supported by risk management and audit practices.\n\n[3] source=TENDER_2023_SEC_01 domain=Security & Compliance sim=0.505\nQ: Describe your organisation’s information security governance structure.\nA: Information security governance is overseen by senior leadership and supported by formal security policies and procedures. Responsibilities are assigned across operational teams. Governance activities include periodic reviews, risk assessments, and internal reporting."
+    }
+  ]
+}

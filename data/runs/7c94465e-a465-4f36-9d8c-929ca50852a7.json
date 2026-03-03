@@ -1,0 +1,122 @@
+{
+  "request_id": "7c94465e-a465-4f36-9d8c-929ca50852a7",
+  "timestamp_utc": "2026-03-03T04:28:15.055954Z",
+  "summary": {
+    "total": 4,
+    "errors": 0,
+    "routed_historical": 3,
+    "routed_template": 1,
+    "flagged_risk": 1,
+    "status": "COMPLETED",
+    "requires_sme_review": 0,
+    "unsupported": 0,
+    "inconsistent": 0,
+    "overclaim": 0,
+    "ready_to_submit": 4,
+    "needs_review": 0,
+    "confidence_min": 0.2,
+    "confidence_avg": 0.51,
+    "confidence_max": 0.8
+  },
+  "questions": [
+    {
+      "question_id": "Q001",
+      "question": "Describe your organisation’s information security management approach.",
+      "suggested_domain": null
+    },
+    {
+      "question_id": "Q002",
+      "question": "Do you hold ISO 27001 certification? Provide certificate number and expiry date.",
+      "suggested_domain": null
+    },
+    {
+      "question_id": "Q003",
+      "question": "Confirm that all customer data is encrypted in transit and at rest. Specify TLS and AES standards.",
+      "suggested_domain": null
+    },
+    {
+      "question_id": "Q999",
+      "question": "Explain your strategy for quantum-safe encryption and post-quantum cryptography readiness.",
+      "suggested_domain": null
+    }
+  ],
+  "enriched": [
+    {
+      "question_id": "Q001",
+      "question": "Describe your organisation’s information security management approach.",
+      "domain": "Security & Compliance",
+      "domain_confidence": 0.8,
+      "domain_used": "llm",
+      "risk_hints": [],
+      "route": "HISTORICAL_GUIDED",
+      "match_strength": "WEAK",
+      "top_similarity": 0.6411351792636864,
+      "flags": [],
+      "alignment": "MED",
+      "confidence": 0.8,
+      "answer": "Our organization’s information security management approach is structured around a comprehensive framework that includes security governance, defined policies, and oversight mechanisms. \n\nSecurity governance is led by senior leadership, ensuring accountability and alignment with organizational objectives. We have established formal security policies and procedures that guide our practices, with responsibilities assigned across both leadership and operational teams. \n\nOur approach includes regular risk assessments and periodic reviews of security controls to ensure their effectiveness. Additionally, we emphasize staff awareness practices to foster a culture of security throughout the organization. \n\nFor further details on our information security management practices, we are happy to provide additional information during due diligence or upon request.",
+      "error": null,
+      "evidence_pack": "[1] source=TENDER_2021_E domain=Security & Compliance sim=0.641\nQ: Describe your organisation’s information security management approach, including security governance, policies, and oversight.\nA: Security governance includes leadership accountability, policy management, risk assessment, and staff awareness practices. Controls are reviewed periodically, and exceptions are documented and managed.\n\n[2] source=TENDER_2024_A domain=Security & Compliance sim=0.627\nQ: Describe your organisation’s information security management approach, including security governance, policies, and oversight.\nA: We maintain an information security management framework with executive oversight, defined security policies and standards, and periodic review. Security responsibilities are assigned across leadership and delivery teams, supported by risk management and audit practices.\n\n[3] source=TENDER_2023_SEC_01 domain=Security & Compliance sim=0.505\nQ: Describe your organisation’s information security governance structure.\nA: Information security governance is overseen by senior leadership and supported by formal security policies and procedures. Responsibilities are assigned across operational teams. Governance activities include periodic reviews, risk assessments, and internal reporting."
+    },
+    {
+      "question_id": "Q002",
+      "question": "Do you hold ISO 27001 certification? Provide certificate number and expiry date.",
+      "domain": "Security & Compliance",
+      "domain_confidence": 1.0,
+      "domain_used": "llm",
+      "risk_hints": [
+        "CERTIFICATION_CLAIM"
+      ],
+      "route": "HISTORICAL_GUIDED",
+      "match_strength": "STRONG",
+      "top_similarity": 0.7683258122593168,
+      "flags": [
+        "HIGH_RISK",
+        "NEEDS_EVIDENCE"
+      ],
+      "alignment": "MED",
+      "confidence": 0.4,
+      "answer": "We can provide relevant security certifications and supporting evidence as part of the formal due diligence process and subject to confidentiality. Certification details (e.g., certificate number and expiry) are provided through official documentation channels upon request.",
+      "error": null,
+      "evidence_pack": "[1] source=TENDER_2024_SEC_11 domain=Security & Compliance sim=0.768\nQ: Do you hold ISO 27001 certification? Provide certificate number and expiry date.\nA: Where applicable, certification documentation and supporting evidence can be provided during due diligence, subject to confidentiality. Certificate identifiers and expiry details are provided via official documentation channels upon request.\n\n[2] source=TENDER_2023_C domain=Security & Compliance sim=0.696\nQ: Do you hold ISO 27001 certification? If yes, provide certificate number and expiry date.\nA: We can align to ISO 27001-aligned practices and provide relevant security documentation as part of due diligence. Certification details, where applicable, are provided through formal channels on request.\n\n[3] source=TENDER_2024_A domain=Security & Compliance sim=0.218\nQ: Describe your organisation’s information security management approach, including security governance, policies, and oversight.\nA: We maintain an information security management framework with executive oversight, defined security policies and standards, and periodic review. Security responsibilities are assigned across leadership and delivery teams, supported by risk management and audit practices."
+    },
+    {
+      "question_id": "Q003",
+      "question": "Confirm that all customer data is encrypted in transit and at rest. Specify TLS and AES standards.",
+      "domain": "Security & Compliance",
+      "domain_confidence": 0.9,
+      "domain_used": "rules",
+      "risk_hints": [],
+      "route": "HISTORICAL_GUIDED",
+      "match_strength": "STRONG",
+      "top_similarity": 0.7247686459035513,
+      "flags": [
+        "PARTIALLY_SUPPORTED_BY_EVIDENCE"
+      ],
+      "alignment": "MED",
+      "confidence": 0.62,
+      "answer": "All customer data is encrypted in transit and at rest using industry-standard mechanisms. Specific details regarding encryption standards and configurations can be provided upon request.",
+      "error": null,
+      "evidence_pack": "[1] source=TENDER_2024_A domain=Security & Compliance sim=0.725\nQ: Confirm that all customer data is encrypted in transit and at rest. Specify encryption standards (e.g., TLS 1.2+, AES-256).\nA: Data is protected in transit using modern TLS protocols, and data at rest is protected using platform-level encryption. Specific cipher suites and key management approaches are available on request and may vary by hosting environment.\n\n[2] source=TENDER_2023_C domain=Security & Compliance sim=0.722\nQ: Confirm that all customer data is encrypted in transit and at rest. Specify encryption standards (e.g., TLS 1.2+, AES-256).\nA: Encryption is applied in transit and at rest using industry-standard mechanisms supported by the hosting platform. Detailed cryptographic standards and configurations can be provided in security documentation.\n\n[3] source=TENDER_2024_SEC_12 domain=Security & Compliance sim=0.714\nQ: Confirm that all customer data is encrypted in transit and at rest. Specify encryption standards (e.g., TLS 1.2+, AES-256).\nA: Data is protected in transit using modern TLS protocols and at rest using platform-level encryption. Specific cipher suites, key management practices, and configuration details can be provided upon request and may vary by hosting environment."
+    },
+    {
+      "question_id": "Q999",
+      "question": "Explain your strategy for quantum-safe encryption and post-quantum cryptography readiness.",
+      "domain": "Security & Compliance",
+      "domain_confidence": 0.8,
+      "domain_used": "rules",
+      "risk_hints": [],
+      "route": "TEMPLATE_SAFE",
+      "match_strength": "NONE",
+      "top_similarity": 0.14754416404593396,
+      "flags": [
+        "NO_STRONG_HISTORICAL_MATCH"
+      ],
+      "alignment": "LOW",
+      "confidence": 0.2,
+      "answer": "Our strategy for quantum-safe encryption and post-quantum cryptography readiness is grounded in our commitment to maintaining robust information security practices. We continuously monitor advancements in cryptographic research and emerging threats associated with quantum computing. \n\nWe are actively assessing our current cryptographic protocols and exploring potential transitions to quantum-resistant algorithms as they become standardized and widely accepted. Our approach includes governance frameworks that ensure we remain informed about developments in the field and can adapt our strategies accordingly.\n\nWhile we do not have specific certifications or audit results to share at this time, we are prepared to provide detailed information about our policies and practices during due diligence or as agreed contractually. This will include our plans for implementing quantum-safe solutions and our overall readiness to address future cryptographic challenges.",
+      "error": null,
+      "evidence_pack": "[1] source=TENDER_2024_SEC_12 domain=Security & Compliance sim=0.148\nQ: Confirm that all customer data is encrypted in transit and at rest. Specify encryption standards (e.g., TLS 1.2+, AES-256).\nA: Data is protected in transit using modern TLS protocols and at rest using platform-level encryption. Specific cipher suites, key management practices, and configuration details can be provided upon request and may vary by hosting environment.\n\n[2] source=TENDER_2024_A domain=Security & Compliance sim=0.144\nQ: Confirm that all customer data is encrypted in transit and at rest. Specify encryption standards (e.g., TLS 1.2+, AES-256).\nA: Data is protected in transit using modern TLS protocols, and data at rest is protected using platform-level encryption. Specific cipher suites and key management approaches are available on request and may vary by hosting environment.\n\n[3] source=TENDER_2023_SEC_04 domain=Security & Compliance sim=0.126\nQ: Describe how encryption is used to protect sensitive information.\nA: Sensitive information is protected using encryption mechanisms in transit and at rest. Encryption controls are implemented through secure protocols and infrastructure-level protections designed to maintain confidentiality and integrity."
+    }
+  ]
+}
