@@ -30,7 +30,6 @@ def summarise_node(state: TenderState) -> TenderState:
     )
     s.needs_review = s.total - s.ready_to_submit
 
-    # confidence rollups (optional but valuable)
     confs = [float(x.confidence) for x in state.enriched if x.confidence is not None]
     if confs:
         s.confidence_min = round(min(confs), 2)
