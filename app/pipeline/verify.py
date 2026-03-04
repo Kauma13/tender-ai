@@ -202,13 +202,6 @@ def verify_answers_node(state: TenderState) -> TenderState:
                 v = verify_answer_cached(q)  # cached
                 apply_verification(q, v)
 
-                # Optional: keep verifier output for debugging / summarise policy
-                # Add these fields to EnrichedQuestion if you want (recommended):
-                # q.verifier_label = v.label
-                # q.verifier_support_score = v.support_score
-                # q.verifier_rationale = v.rationale
-                # q.verifier_risky_claims = v.risky_claims
-
                 # Force SME review for any serious verifier outcome
                 flags = set(q.flags or [])
                 
