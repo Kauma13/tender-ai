@@ -69,10 +69,6 @@ def should_store_generated(q: EnrichedQuestion) -> Tuple[bool, str]:
     """
     Decide if we should store the generated answer into the 'generated' long-term memory store.
 
-    Interview-friendly policy:
-    - Only store when answer looks reliable (high confidence, no critical flags).
-    - Prefer storing when it is evidence-guided (or at least not contradicted/unsupported).
-    """
     flags = set(q.flags or [])
 
     if not (q.answer or "").strip():
