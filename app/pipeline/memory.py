@@ -85,7 +85,7 @@ def should_store_generated(q: EnrichedQuestion) -> Tuple[bool, str]:
     if flags.intersection(hard_block):
         return False, f"blocked_by_flags:{sorted(flags.intersection(hard_block))}"
 
-    # If verifier says partial support, you may still store, but require higher confidence
+    # If verifier says partial support, still stores, but require higher confidence
     partially = "PARTIALLY_SUPPORTED_BY_EVIDENCE" in flags
 
     # Confidence gates
